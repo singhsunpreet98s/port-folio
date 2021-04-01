@@ -1,0 +1,123 @@
+.mainNavbar{
+   background:url('file:///E:/study/projects/react/port-folio/src/components/images/nav1.jpg');
+   
+   background-color:rgb(17, 17, 17);
+
+   background-size: cover;
+ 
+   width:100%;
+   height:600px;
+   clip-path: ellipse(83% 55% at 66% 33%);
+   z-index:1;
+}
+.navbar{
+   display: flex;
+   flex-direction: row;
+   z-index: 2;
+   color:white;
+   justify-content: space-evenly;
+
+}
+.intro{
+   padding:10% 25%;
+ }
+h2{
+   font-size: 35px;
+   font-weight:500;
+   font-variant: small-caps;
+}
+p{
+   font-size: 22px;
+   font-weight: 300;
+   font-variant: small-caps;
+}
+.downarrow{
+   margin-left: 10%;
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+}
+.downarrow  span{
+   margin-top:-4px;
+   transform:rotate(45deg);
+   border-right:2px solid black;
+   border-bottom:2px solid black;
+   border-radius: 2px;
+   width:10px;
+   height:10px;
+}
+.downarrow span:nth-child(1) {
+   animation:fade 3s  linear infinite ;
+
+}
+.downarrow span:nth-child(2) {
+   animation:fade 3s 1s linear infinite ;
+
+}
+.downarrow span:nth-child(3) {
+   animation:fade 3s 2s linear infinite ;
+
+}
+
+@keyframes fade{
+   0%{
+      border-color:black;
+   }
+   50%{
+      border-color:white;
+   }
+   100%{
+      border-color: black;
+   }
+}
+
+.logo{
+   display: flex;
+   
+   padding:0px 20px 
+}
+.navActions{
+   display:flex;
+   flex-direction: row;
+   color:white;
+
+}
+.navLinks{
+   padding:14px;
+   cursor:pointer;
+   text-transform:uppercase;
+   font-size:14px;
+}
+.navActiveLink{
+   color:red;
+}
+.homeContent{
+   color:white;
+}
+@media (max-width:580px) {
+   .navbar{
+     flex-direction:column;
+   
+   }
+   .logo{
+      text-align: center;
+      flex:1;
+      
+   }
+   .mainNavbar{
+      clip-path: ellipse(93% 55% at 50% 33%);
+   }
+   .navLinks{
+      justify-content:space-evenly;
+   }
+   .navActions{
+      justify-content:space-evenly;
+   }
+}
+@media (max-width:400px){
+   .navLinks
+   {
+      font-size:10px;
+      justify-content:space-evenly;
+   }
+}
