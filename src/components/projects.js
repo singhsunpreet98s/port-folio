@@ -12,6 +12,8 @@ import image3 from './images/Capture2.JPG';
 import image4 from './images/Capture3.JPG';
 import image5 from './images/Capture4.JPG';
 import image6 from './images/Capture6.JPG';
+import image7 from './images/Capture7.jpg';
+
 const imgArr = [
    {
       image: image1,
@@ -24,7 +26,7 @@ const imgArr = [
    }, {
       image: image3
       , link: 'https://youthful-turing-23d40b.netlify.app/',
-      title: 'Covid 19 world app creaetd for supporting the cause ,created using Reactjs , and d3 Click to view'
+      title: 'Covid 19 world app created for supporting the cause ,created using Reactjs , and d3 Click to view'
    }, {
       image: image4,
       link: 'https://book-cart-js.netlify.app/',
@@ -39,6 +41,11 @@ const imgArr = [
       image: image6,
       link: '',
       title: 'A Prime-video look like movie app created using React.js redux react-router-dom for frontend and djnago,mysql and rest_framework for backend '
+   },
+   {
+      image: image7,
+      link: 'https://github.com/singhsunpreet98s/cric-score',
+      title: 'Cricet Score app created usign react-native and fireabase with a console created in react js which have makes easy to update score on clicks click to watch scouce code '
    },
 
 
@@ -72,7 +79,7 @@ function Projects() {
             <ArrowForwardIosIcon className="fwd" onClick={() => next()} />
             {
                imgArr.map((item, index) => {
-                  return (currentImg === index) && <a href={imgArr[index].link} target="_blank" className="reference" ><span className="ImgTitle"><p>{imgArr[index].title}</p></span><img src={imgArr[index].image} key={index} alt={imgArr[index].image} className={(b) ? "mainImage" : 'mainImage2'} /></a>
+                  return (currentImg === index) && <a href={imgArr[index].link} key={index} target="_blank" className="reference" ><span className="ImgTitle"><p>{imgArr[index].title}</p></span><img src={imgArr[index].image} alt={imgArr[index].image} className={(b) ? "mainImage" : 'mainImage2'} /></a>
                })
             }
             <div className="dotsCont">

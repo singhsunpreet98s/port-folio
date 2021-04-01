@@ -35,9 +35,7 @@ export default function Navbar() {
                <Link className="navLinks" activeClass="navActiveLink" to="works" spy={true} smooth={true} offset={160} duration={1000}>
                   works
                </Link>
-               <Link className="navLinks" activeClass="navActiveLink" to="blog" spy={true} smooth={true} offset={50} duration={500}>
-                  blog
-               </Link>
+
                <Link className="navLinks" activeClass="navActiveLink" to="contact" spy={true} smooth={true} offset={50} duration={500}>
                   contact
                </Link>

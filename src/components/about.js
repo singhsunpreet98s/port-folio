@@ -17,6 +17,8 @@ import mongodbLogo from './images/mongodb.png';
 import opencvLogo from './images/opencv.png';
 import npLogo from './images/np.png';
 import reactnativeLogo from './images/native.png';
+import djangoLogo from './images/django.png'
+import restFrameworkLogo from './images/rest_framework.png'
 import { useSelector } from 'react-redux'
 
 const works = [
@@ -79,6 +81,8 @@ export default function About() {
                   <img src={sqlLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
                   <img src={opencvLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
                   <img src={npLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
+                  <img src={djangoLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
+                  <img src={restFrameworkLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
                   <img src={reactnativeLogo} style={{ height: '40px', marginLeft: '40px', marginTop: '20px' }} />
                </div>
             </Flip>

@@ -8,8 +8,23 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { useSelector } from 'react-redux';
+import emailjs from 'emailjs-com'
 export default function Contact() {
    const darkMode = useSelector((state) => state.pageMode.darkMode)
+   emailjs.init('user_Td1hfRuHbVW5RTslRFqXb')
+   function sendEmail(e) {
+      e.preventDefault();
+      emailjs.sendForm('sunpreetmail', 'template_9clakkr', e.target).then((result) => {
+
+         if (result.text === "OK") {
+            e.target.reset()
+         }
+      }
+         , (error) =>
+            console.log(error.text))
+
+
+   }
    return (
 
       <Element name="contact">
@@ -17,22 +32,22 @@ export default function Contact() {
             <div className="mainContainer1" >
                <div className="email" style={{ color: (darkMode) ? "white" : "gray" }}>
                   <h2>Tell your Review and Suggestions</h2>
-                  <form >
+                  <form onSubmit={(e) => sendEmail(e)}>
                      <div className="frma" >
                         <div className="inptxt">
                            <p>Name</p>
-                           <input className="txt" type="text"></input>
+                           <input className="txt" type="text" name="name"></input>
                         </div>
                         <div className="inptxt">
                            <p>Email</p>
-                           <input className="txt" type="text"></input>
+                           <input className="txt" type="text" name="email"></input>
                         </div>
-                        <div className="inptxt">
+                        <div className="inptxt" >
                            <p>Comments</p>
-                           <textarea name="para" className="txt" style={{ height: '150px' }} cols="30" rows="10"></textarea>
+                           <textarea name="para" className="txt" name="message" style={{ height: '150px' }} cols="30" rows="10"></textarea>
                         </div>
                         <div style={{ textAlign: 'left', marginLeft: '6.2%', marginTop: '30px' }} className="resp">
-                           <button className="btn1">Submit</button>
+                           <button className="btn1" type="submit">Submit</button>
                         </div>
                      </div>
                   </form>
